@@ -1,15 +1,16 @@
-import sklearn as sk
-from sklearn import linear_model
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score
+import numpy as np 
+import pandas as pd 
+import seaborn as sns
 import matplotlib.pyplot as plt
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
 
 
 df=pd.read_csv('Fish.csv')
 
-df.fillna(-9999,inplace=True)
+print(str('Vendo se tem valores nada ver no dataset: '), df.isnull().values.any())
 
 X=np.array(df[["Width"]])
 
