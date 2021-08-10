@@ -29,4 +29,4 @@ print('Model intercept: ', reg.intercept_)
 print('Model coefficientes: ', reg.coef_)
 
 y_pred= reg.predict(X_treino)
-print(r2_score(y_treino, y_cabeca))
+print(r2_score(y_treino, y_pred))
