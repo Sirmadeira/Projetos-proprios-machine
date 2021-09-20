@@ -12,4 +12,6 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix #Criar matriz de confusao
 from sklearn.metrics import plot_confusion_matrix# Desenha
 
+df=pd.read_csv('data/Telco-Customer-Churn.csv')
 
+print(df.head())
