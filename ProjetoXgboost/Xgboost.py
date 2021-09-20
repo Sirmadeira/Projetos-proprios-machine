@@ -15,7 +15,7 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-df=pd.read_csv('/Projetos-proprios-machine/Projeto_xgboost/parkinsons.data')
+df=pd.read_csv('/parkinsons.csv')
 
 
 
