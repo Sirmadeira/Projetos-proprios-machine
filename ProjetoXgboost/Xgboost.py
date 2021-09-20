@@ -39,7 +39,7 @@ y=labels
 X_treino,X_teste,y_treino,y_teste=train_test_split(X,y,test_size=0.2,random_state=7,)
 #Random state e o quanto a gente vai ficar trocando randomicamente os dados
 
-modelo=XGBClassifier(use_label_encoder=False,eval_metric='mlogloss')
+modelo=XGBClassifier(use_label_encoder=False,eval_metric='mlogloss',reg_lambda=2,)
 modelo.fit(X_treino,y_treino)
 
 y_pred=modelo.predict(X_teste)
