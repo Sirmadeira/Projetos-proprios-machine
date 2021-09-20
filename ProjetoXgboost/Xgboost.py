@@ -14,8 +14,8 @@ from sklearn.preprocessing import MinMaxScaler
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
-df=pd.read_csv('/parkinsons.csv')
+#Realmente bugo aqui tive que usar absulute nao faco ideia pq
+df=pd.read_csv('C:/Users/FranciscoFroes/Documents/GitHub/Projetos-proprios-machine/ProjetoXgboost/parkinsons.csv')
 
 
 
