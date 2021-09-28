@@ -29,4 +29,5 @@ df.loc[:].replace('-', '_',regex=True,inplace=True)
 #Ajeitando dados
 
 #Oh shit total charges ta em object oh shit tudo ta em charges
-#df['TotalCharges']=pd.to_numeric(df['TotalCharges'])
+df.loc[(df['TotalCharges']== ' '),'TotalCharges']=0
+
