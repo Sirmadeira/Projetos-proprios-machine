@@ -27,8 +27,6 @@ df.drop(['customerID'],axis=1,inplace=True)
 df.loc[:].replace(' ', '_',regex=True,inplace=True)
 df.loc[:].replace('-', '_',regex=True,inplace=True)
 #Ajeitando dados
-#print(df.tail())
 
-print(df.dtypes)
-#Oh shit total charges ta em object hahaha
-df['TotalCharges']=pd.to_numeric(df['TotalCharges'])
+#Oh shit total charges ta em object oh shit tudo ta em charges
+#df['TotalCharges']=pd.to_numeric(df['TotalCharges'])
