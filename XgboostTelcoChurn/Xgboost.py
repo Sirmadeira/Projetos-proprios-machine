@@ -12,6 +12,23 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix #Criar matriz de confusao
 from sklearn.metrics import plot_confusion_matrix# Desenha
 
+
+pd.options.display.max_columns=12
+
 df=pd.read_csv('data/Telco-Customer-Churn.csv')
 
-print(df.head())
+
+
+#df.drop(['Churn Label','Churn Score','CLTV','Churn Reason'],axis=1,inplace=True)
+#Axis=1 para remover colunas
+
+df.drop(['customerID'],axis=1,inplace=True)
+
+df.loc[:].replace(' ', '_',regex=True,inplace=True)
+df.loc[:].replace('-', '_',regex=True,inplace=True)
+#Ajeitando dados
+#print(df.tail())
+
+print(df.dtypes)
+#Oh shit total charges ta em object hahaha
+df['TotalCharges']=pd.to_numeric(df['TotalCharges'])
