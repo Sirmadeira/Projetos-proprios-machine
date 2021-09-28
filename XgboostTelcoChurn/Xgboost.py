@@ -24,10 +24,12 @@ df=pd.read_csv('data/Telco-Customer-Churn.csv')
 
 df.drop(['customerID'],axis=1,inplace=True)
 
-df.loc[:].replace(' ', '_',regex=True,inplace=True)
-df.loc[:].replace('-', '_',regex=True,inplace=True)
+df.loc[:].replace(' ', '0',regex=True,inplace=True)
+
 #Ajeitando dados
 
 #Oh shit total charges ta em object oh shit tudo ta em charges
 df.loc[(df['TotalCharges']== ' '),'TotalCharges']=0
+df['TotalCharges']=pd.to_numeric(df['TotalCharges'])
+print(df.dtypes)
 
